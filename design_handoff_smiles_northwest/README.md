@@ -171,6 +171,16 @@ keep swapping images during review). Slot ids describe the intended shot (e.g.
 `nw-1c-svc-cosmetic`, `nw-1a-hero`, `nw-1b-testimonial`). Note: 1B's service-card slots
 intentionally share ids with 1C's (`nw-1c-svc-*`) so the same dropped photo appears in both.
 
+### The actual images are included — `placeholder_images/`
+The photos currently shown in the concepts have been exported to **`placeholder_images/<slot-id>.webp`**
+(19 files). Each filename is the slot id it fills, so the mapping is direct — e.g.
+`placeholder_images/nw-1a-hero.webp` is the 1A hero photo, `nw-1c-svc-cosmetic.webp` is the 1C
+cosmetic card, etc. When you swap `<image-slot>` for `<img>`, point `src` at the matching file
+(convert to jpg/png if your pipeline prefers). These are downscaled review comps (WebP, longest
+side ~1200px) — **fine for the pitch, but request full-resolution originals before production.**
+The raw sidecar the component reads, `.image-slots.state.json`, is also included if you keep the
+component instead of swapping to `<img>`.
+
 ## Assets
 - `assets/logo-white.png`, `logo-navy.png`, `logo-teal.png` — the Smiles Northwest wordmark
   (serif + smile-swoosh) in three colourways. Recolour from the white master if you need others.
@@ -182,4 +192,6 @@ intentionally share ids with 1C's (`nw-1c-svc-*`) so the same dropped photo appe
 ## Files
 - `Smiles Northwest Homepages.dc.html` — the source containing all four concepts (sections `2a`, `1a`, `1b`, `1c`).
 - `image-slot.js` — the photo-placeholder web component.
+- `placeholder_images/` — the 19 photos shown in the concepts, one per slot id (`<slot-id>.webp`).
+- `.image-slots.state.json` — sidecar the image-slot component reads (only needed if you keep the component).
 - `assets/` — logo colourways.
