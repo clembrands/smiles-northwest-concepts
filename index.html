@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smiles Northwest — Homepage Concepts</title>
+<style>
+  :root{color-scheme:light}
+  *{box-sizing:border-box}
+  body{margin:0;background:#e8e5df;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#2a2925}
+  header{max-width:1200px;margin:0 auto;padding:56px 24px 32px}
+  header h1{font-size:22px;margin:0 0 8px;font-weight:700;color:#1a1916}
+  header p{margin:0;font-size:14px;color:#6f6b60}
+  .grid{max-width:1200px;margin:0 auto;padding:0 24px 72px;display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+  @media (max-width:860px){.grid{grid-template-columns:1fr}}
+  .thumb{display:block;text-decoration:none;color:inherit}
+  .frame{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:14px;border:1px solid rgba(0,0,0,.1);box-shadow:0 6px 24px rgba(0,0,0,.1);background:#fff}
+  .frame iframe{position:absolute;top:0;left:0;width:1440px;height:2400px;border:0;transform-origin:top left;pointer-events:none}
+  .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px}
+  .meta b{font-size:15px;font-weight:700;color:#1a1916}
+  .meta span{font-size:12.5px;color:#8a8578}
+  .thumb:hover .frame{box-shadow:0 10px 32px rgba(0,0,0,.16);border-color:rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Smiles Northwest — Homepage concepts</h1>
+  <p>Click any concept to view the full page.</p>
+</header>
+
+<div class="grid">
+  <a class="thumb" href="concepts/2a.html">
+    <div class="frame"><iframe src="concepts/2a.html" scrolling="no" tabindex="-1" loading="lazy"></iframe></div>
+    <div class="meta"><b>2A · Warm &amp; Approachable</b><span>Cream + bold blue + coral</span></div>
+  </a>
+  <a class="thumb" href="concepts/1a.html">
+    <div class="frame"><iframe src="concepts/1a.html" scrolling="no" tabindex="-1" loading="lazy"></iframe></div>
+    <div class="meta"><b>1A · Editorial Boutique</b><span>Espresso + gold-taupe, dark &amp; luxe</span></div>
+  </a>
+  <a class="thumb" href="concepts/1b.html">
+    <div class="frame"><iframe src="concepts/1b.html" scrolling="no" tabindex="-1" loading="lazy"></iframe></div>
+    <div class="meta"><b>1B · Clean Clinical Calm</b><span>Warm white + sage, light &amp; airy</span></div>
+  </a>
+  <a class="thumb" href="concepts/1c.html">
+    <div class="frame"><iframe src="concepts/1c.html" scrolling="no" tabindex="-1" loading="lazy"></iframe></div>
+    <div class="meta"><b>1C · Modern Tech-Forward</b><span>Forest green + amber, bold &amp; structured</span></div>
+  </a>
+</div>
+
+<script>
+  const PAGE_WIDTH = 1440;
+  function scaleFrames() {
+    document.querySelectorAll('.frame').forEach((frame) => {
+      const w = frame.getBoundingClientRect().width;
+      const scale = w / PAGE_WIDTH;
+      frame.querySelector('iframe').style.transform = `scale(${scale})`;
+    });
+  }
+  window.addEventListener('resize', scaleFrames);
+  window.addEventListener('load', scaleFrames);
+  scaleFrames();
+</script>
+
+</body>
+</html>
