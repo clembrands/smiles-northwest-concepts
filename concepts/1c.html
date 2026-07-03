@@ -18,8 +18,7 @@
   .c1-hero-ov{position:absolute;inset:0;pointer-events:none;background:transparent;transition:background .2s}
   image-slot[data-filled]+.c1-hero-ov{background:linear-gradient(90deg,rgba(16,42,34,.86),rgba(16,42,34,.55))}
   .c-img{position:relative;display:block}
-  .c-img::after{content:'';position:absolute;inset:0;background:rgba(244,241,234,.62);opacity:1;transition:opacity .8s ease;pointer-events:none}
-  .c-img[data-inview]::after{opacity:0}
+  .c-img::after{content:'';position:absolute;inset:0;background:rgba(244,241,234,.62);pointer-events:none}
 </style>
 </head>
 <body>
@@ -150,20 +149,5 @@
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const attach = () => {
-    const nodes = document.querySelectorAll('.c-img');
-    if (!nodes.length) { setTimeout(attach, 200); return; }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) { e.target.setAttribute('data-inview', ''); io.unobserve(e.target); }
-      });
-    }, { rootMargin: '0px 0px -15% 0px', threshold: 0 });
-    nodes.forEach((n) => io.observe(n));
-  };
-  setTimeout(attach, 100);
-});
-</script>
 </body>
 </html>
