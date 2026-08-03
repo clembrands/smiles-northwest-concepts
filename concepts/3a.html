@@ -19,21 +19,22 @@
   .btn-dark{cursor:pointer;transition:background-color .2s ease}
   .btn-dark:hover{background:#00497e !important}
   .btn-outline:hover{background:rgba(255,255,255,.14) !important;border-color:#fff !important;color:#fff !important}
-  /* Nav link hover */
-  .nav-link{color:#0c72c6;transition:color .2s ease}
-  .nav-link:hover{color:#005B9A}
+  /* Slide-out menu */
+  .menu-btn{transition:background-color .2s ease}
+  .menu-btn:hover{background:#0f2334 !important}
+  .menu-item{display:flex;align-items:center;justify-content:space-between;padding:15px 0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;color:#005B9A;border-bottom:1px solid rgba(20,32,44,.1);transition:color .2s ease}
+  .menu-item:hover{color:#0f2334}
+  .mi-arrow{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1.5px solid currentColor;border-radius:50%;flex:none}
 </style>
 </head>
 <body>
 <div style="background:#2c3d4f;color:#eef2f6;font-family:'Manrope',sans-serif">
           <!-- nav -->
-          <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:20px 46px;background:#f6f3ec;border-bottom:1px solid rgba(20,32,44,.1)">
-            <img src="../assets/logo-blue.png" alt="Smiles Northwest" style="height:46px;width:auto;justify-self:start">
-            <nav style="justify-self:center;display:flex;gap:34px;font-size:13px;font-weight:600;letter-spacing:.03em">
-              <a href="#" class="nav-link">Services</a><a href="#" class="nav-link">The Doctors</a><a href="#" class="nav-link">Technology</a><a href="#" class="nav-link">Smile Gallery</a><a href="#" class="nav-link">Contact</a>
-            </nav>
-            <div style="justify-self:end">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 46px;background:#f6f3ec;border-bottom:1px solid rgba(20,32,44,.1)">
+            <img src="../assets/logo-blue.png" alt="Smiles Northwest" style="height:46px;width:auto">
+            <div style="display:flex;align-items:center;gap:16px">
               <div class="btn-dark" style="padding:15px 30px;background:#005B9A;color:#f6f3ec;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:8px">Call (503) 644-9200</div>
+              <button onclick="openMenu()" aria-label="Open menu" class="menu-btn" style="display:flex;align-items:center;gap:12px;padding:14px 24px;background:#16324a;color:#f6f3ec;border:0;border-radius:8px;font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer">MENU<span style="display:inline-flex;flex-direction:column;gap:4px;width:22px"><span style="height:2px;background:#f6f3ec;border-radius:2px"></span><span style="height:2px;background:#f6f3ec;border-radius:2px"></span><span style="height:2px;background:#f6f3ec;border-radius:2px"></span></span></button>
             </div>
           </div>
 
@@ -57,12 +58,12 @@
           <div style="display:grid;grid-template-columns:1fr 1fr;background:#f6f3ec">
             <img loading="lazy" src="../assets/photos/nw-1a-hero.webp" alt="Reception / interior" style="display:block;width:100%;height:100%;min-height:480px;object-fit:cover">
             <div style="padding:82px 62px;display:flex;flex-direction:column;justify-content:center">
-              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;line-height:1.1;margin:0 0 22px;color:#0c72c6">A calmer, more considered kind of dental visit</h2>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;line-height:1.1;margin:0 0 22px;color:#005B9A">A calmer, more considered kind of dental visit</h2>
               <p style="font-size:14.5px;line-height:1.8;color:#4c5a67;margin:0 0 16px">We built the practice around unhurried appointments, clear explanations, and technology that lets us plan every step before we begin — so you always know what's happening and why.</p>
               <p style="font-size:14.5px;line-height:1.8;color:#4c5a67;margin:0 0 28px">From your first cleaning to complex reconstructive work, it's all under one roof, with a team that has cared for some families across four generations.</p>
               <div style="display:flex;gap:38px">
-                <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:40px;color:#0c72c6;line-height:1">Same-day</div><div style="font-size:12px;color:#5c6b78;margin-top:6px">emergency visits</div></div>
-                <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:40px;color:#0c72c6;line-height:1">In-house</div><div style="font-size:12px;color:#5c6b78;margin-top:6px">implants &amp; surgery</div></div>
+                <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:40px;color:#005B9A;line-height:1">Same-day</div><div style="font-size:12px;color:#5c6b78;margin-top:6px">emergency visits</div></div>
+                <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:40px;color:#005B9A;line-height:1">In-house</div><div style="font-size:12px;color:#5c6b78;margin-top:6px">implants &amp; surgery</div></div>
               </div>
             </div>
           </div>
@@ -76,43 +77,43 @@
               <div style="background:#f6f3ec;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <img loading="lazy" src="../assets/photos/nw-1c-svc-cosmetic.webp" alt="Cosmetic" style="display:block;width:100%;height:190px;object-fit:cover">
                 <div style="padding:26px 30px 32px">
-                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#0c72c6;margin-bottom:9px">Cosmetic Dentistry</div>
+                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#005B9A;margin-bottom:9px">Cosmetic Dentistry</div>
                   <p style="font-size:13.5px;line-height:1.65;color:#4c5a67;margin:0">Digitally designed smiles with Smilecloud planning — veneers, whitening and restorative artistry.</p>
                 </div>
               </div>
               <div style="background:#f6f3ec;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <img loading="lazy" src="../assets/photos/nw-1c-svc-implants.webp" alt="Implants" style="display:block;width:100%;height:190px;object-fit:cover">
                 <div style="padding:26px 30px 32px">
-                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#0c72c6;margin-bottom:9px">Dental Implants</div>
+                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#005B9A;margin-bottom:9px">Dental Implants</div>
                   <p style="font-size:13.5px;line-height:1.65;color:#4c5a67;margin:0">Surgical and restorative implants in-house — Dr. Chen's advanced training handles cases many practices refer out.</p>
                 </div>
               </div>
               <div style="background:#f6f3ec;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <img loading="lazy" src="../assets/photos/nw-1c-svc-invisalign.webp" alt="Invisalign" style="display:block;width:100%;height:190px;object-fit:cover">
                 <div style="padding:26px 30px 32px">
-                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#0c72c6;margin-bottom:9px">Invisalign</div>
+                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#005B9A;margin-bottom:9px">Invisalign</div>
                   <p style="font-size:13.5px;line-height:1.65;color:#4c5a67;margin:0">Clear-aligner treatment for complex aesthetic and functional cases, planned with iTero scans.</p>
                 </div>
               </div>
               <div style="background:#f6f3ec;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,32,44,.24);position:relative">
-                <div style="position:absolute;top:16px;right:16px;z-index:3;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#0c72c6;background:#dcecf8;padding:5px 10px;border-radius:12px">Rare in area</div>
+                <div style="position:absolute;top:16px;right:16px;z-index:3;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#005B9A;background:#dcecf8;padding:5px 10px;border-radius:12px">Rare in area</div>
                 <img loading="lazy" src="../assets/photos/nw-1c-svc-myobrace.webp" alt="Myobrace" style="display:block;width:100%;height:190px;object-fit:cover">
                 <div style="padding:26px 30px 32px">
-                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#0c72c6;margin-bottom:9px">Myobrace for Kids</div>
+                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#005B9A;margin-bottom:9px">Myobrace for Kids</div>
                   <p style="font-size:13.5px;line-height:1.65;color:#4c5a67;margin:0">Guiding healthy jaw, airway and facial growth in children — minimally invasive.</p>
                 </div>
               </div>
               <div style="background:#f6f3ec;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <img loading="lazy" src="../assets/photos/nw-1c-svc-tmj.webp" alt="TMJ / sleep" style="display:block;width:100%;height:190px;object-fit:cover">
                 <div style="padding:26px 30px 32px">
-                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#0c72c6;margin-bottom:9px">TMJ &amp; Sleep Apnea</div>
+                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#005B9A;margin-bottom:9px">TMJ &amp; Sleep Apnea</div>
                   <p style="font-size:13.5px;line-height:1.65;color:#4c5a67;margin:0">TMJ therapy and mandibular advancement appliances for better rest and lasting comfort.</p>
                 </div>
               </div>
               <div style="background:#f6f3ec;border-radius:16px;overflow:hidden;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <img loading="lazy" src="../assets/photos/nw-1c-svc-general.webp" alt="General / perio" style="display:block;width:100%;height:190px;object-fit:cover">
                 <div style="padding:26px 30px 32px">
-                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#0c72c6;margin-bottom:9px">General &amp; Periodontal</div>
+                  <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;color:#005B9A;margin-bottom:9px">General &amp; Periodontal</div>
                   <p style="font-size:13.5px;line-height:1.65;color:#4c5a67;margin:0">Comprehensive family dentistry and advanced periodontal care led by a long-tenured hygiene team.</p>
                 </div>
               </div>
@@ -122,7 +123,7 @@
           <!-- technology band -->
           <div style="display:grid;grid-template-columns:1fr 1fr;background:#f6f3ec">
             <div style="padding:80px 60px">
-              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;line-height:1.08;margin:0 0 22px;color:#0c72c6">We see what others miss</h2>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;line-height:1.08;margin:0 0 22px;color:#005B9A">We see what others miss</h2>
               <p style="font-size:14.5px;line-height:1.75;color:#4c5a67;margin:0 0 34px;max-width:440px">A diagnostic stack most offices don't have — so problems are caught earlier and treatment is planned precisely.</p>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
                 <div style="border-top:1px solid rgba(20,32,44,.14);padding-top:14px"><div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#16241d">Overjet Vision AI</div><div style="font-size:12px;color:#5c6b78;margin-top:3px">AI-assisted diagnosis</div></div>
@@ -138,9 +139,9 @@
           <div style="display:grid;grid-template-columns:1fr 1fr;background:#f6f3ec">
             <img loading="lazy" src="../assets/photos/nw-1c-docs.webp" alt="Dr. Chen &amp; Dr. Dotson" style="display:block;width:100%;height:100%;min-height:500px;object-fit:cover">
             <div style="padding:80px 62px;display:flex;flex-direction:column;justify-content:center">
-              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;line-height:1.12;margin:0 0 22px;color:#0c72c6">Care as a partnership, <span style="font-style:italic">not a transaction</span></h2>
+              <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;line-height:1.12;margin:0 0 22px;color:#005B9A">Care as a partnership, <span style="font-style:italic">not a transaction</span></h2>
               <p style="font-size:14.5px;line-height:1.8;color:#4c5a67;margin:0 0 18px">Dr. Chen and Dr. Dotson bring decades of combined experience and a shared philosophy: treat the whole person, educate at every step, and build health that lasts a lifetime. It's why families return for four generations.</p>
-              <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#0c72c6;border-bottom:1px solid #0c72c6;padding-bottom:6px;width:fit-content">Meet the team →</div>
+              <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#005B9A;border-bottom:1px solid #005B9A;padding-bottom:6px;width:fit-content">Meet the team →</div>
             </div>
           </div>
 
@@ -153,17 +154,17 @@
               <div style="background:#f6f3ec;border-radius:16px;padding:34px 34px 30px;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <div role="img" aria-label="Rated 5 out of 5 stars" style="font-size:17px;color:#e0b84e;letter-spacing:3px;margin-bottom:16px">★★★★★</div>
                 <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;line-height:1.5;color:#22303d;margin:0 0 20px">"They take the time to explain everything and genuinely care. Three generations of my family come here."</p>
-                <div style="font-size:12.5px;font-weight:700;color:#0a6ab8;letter-spacing:.03em">Verified patient review</div>
+                <div style="font-size:12.5px;font-weight:700;color:#005B9A;letter-spacing:.03em">Verified patient review</div>
               </div>
               <div style="background:#f6f3ec;border-radius:16px;padding:34px 34px 30px;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <div role="img" aria-label="Rated 5 out of 5 stars" style="font-size:17px;color:#e0b84e;letter-spacing:3px;margin-bottom:16px">★★★★★</div>
                 <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;line-height:1.5;color:#22303d;margin:0 0 20px">"The technology is unlike any office I've been to — they caught something two other dentists missed."</p>
-                <div style="font-size:12.5px;font-weight:700;color:#0a6ab8;letter-spacing:.03em">Verified patient review</div>
+                <div style="font-size:12.5px;font-weight:700;color:#005B9A;letter-spacing:.03em">Verified patient review</div>
               </div>
               <div style="background:#f6f3ec;border-radius:16px;padding:34px 34px 30px;box-shadow:0 14px 34px rgba(20,32,44,.24)">
                 <div role="img" aria-label="Rated 5 out of 5 stars" style="font-size:17px;color:#e0b84e;letter-spacing:3px;margin-bottom:16px">★★★★★</div>
                 <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;line-height:1.5;color:#22303d;margin:0 0 20px">"Calm, unhurried, and genuinely kind with my kids. We finally found a dentist we'll keep for life."</p>
-                <div style="font-size:12.5px;font-weight:700;color:#0a6ab8;letter-spacing:.03em">Verified patient review</div>
+                <div style="font-size:12.5px;font-weight:700;color:#005B9A;letter-spacing:.03em">Verified patient review</div>
               </div>
             </div>
           </div>
@@ -172,9 +173,9 @@
           <div style="padding:84px 46px 90px;background:#f6f3ec">
             <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;max-width:1240px;margin-left:auto;margin-right:auto">
               <div>
-                <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:44px;margin:0;color:#0c72c6">Real results, planned digitally</h2>
+                <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:44px;margin:0;color:#005B9A">Real results, planned digitally</h2>
               </div>
-              <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#0c72c6;border-bottom:1px solid #0c72c6;padding-bottom:6px;white-space:nowrap">View full gallery →</div>
+              <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#005B9A;border-bottom:1px solid #005B9A;padding-bottom:6px;white-space:nowrap">View full gallery →</div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1240px;margin:0 auto">
               <img loading="lazy" src="../assets/photos/smile.png" alt="Patient smile" style="display:block;width:100%;height:230px;object-fit:cover;border-radius:14px">
@@ -224,11 +225,35 @@
           <div style="padding:52px 46px 40px;background:#f6f3ec;border-top:1px solid rgba(20,32,44,.1);display:flex;justify-content:space-between;align-items:flex-start">
             <div><img loading="lazy" src="../assets/logo-blue.png" alt="Smiles Northwest" style="height:40px;width:auto"><p style="font-size:12.5px;color:#5c6b78;margin:16px 0 0;line-height:1.7">Comprehensive, individualized dentistry<br>Beaverton, Oregon</p></div>
             <div style="display:flex;gap:60px;font-size:12.5px;color:#4c5a67;line-height:2">
-              <div><div style="color:#0c72c6;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px">Care</div>Cosmetic<br>Implants<br>Invisalign<br>Myobrace</div>
-              <div><div style="color:#0c72c6;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px">Practice</div>The Doctors<br>Technology<br>Smile Gallery<br>Contact</div>
-              <div><div style="color:#0c72c6;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px">Visit</div>(503) 644-9200<br>Mon–Fri 8–5<br>Beaverton, OR</div>
+              <div><div style="color:#005B9A;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px">Care</div>Cosmetic<br>Implants<br>Invisalign<br>Myobrace</div>
+              <div><div style="color:#005B9A;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px">Practice</div>The Doctors<br>Technology<br>Smile Gallery<br>Contact</div>
+              <div><div style="color:#005B9A;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px">Visit</div>(503) 644-9200<br>Mon–Fri 8–5<br>Beaverton, OR</div>
             </div>
           </div>
         </div>
+
+        <!-- slide-out menu -->
+        <div id="menuOverlay" onclick="closeMenu()" style="position:fixed;inset:0;background:rgba(20,32,44,.5);opacity:0;visibility:hidden;transition:opacity .3s ease;z-index:998"></div>
+        <aside id="menuPanel" aria-label="Site menu" style="position:fixed;top:0;right:0;height:100%;width:430px;max-width:88vw;background:#f6f3ec;box-shadow:-12px 0 44px rgba(20,32,44,.28);transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);z-index:999;display:flex;flex-direction:column;padding:28px 42px 40px;overflow-y:auto;font-family:'Manrope',sans-serif">
+          <button onclick="closeMenu()" aria-label="Close menu" style="align-self:flex-end;background:none;border:0;cursor:pointer;color:#16324a;padding:6px;margin-bottom:14px">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+          <nav style="display:flex;flex-direction:column">
+            <a href="#" class="menu-item">Services<span class="mi-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+            <a href="#" class="menu-item">The Doctors<span class="mi-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+            <a href="#" class="menu-item">Technology<span class="mi-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+            <a href="#" class="menu-item">Smile Gallery<span class="mi-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+            <a href="#" class="menu-item">Contact Us<span class="mi-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+          </nav>
+          <div class="btn-dark" style="margin:28px 0 34px;padding:16px 28px;background:#005B9A;color:#f6f3ec;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:8px;text-align:center;cursor:pointer">Call (503) 644-9200</div>
+          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#005B9A;font-weight:700;margin-bottom:12px">Beaverton · SW Portland &amp; Hillsboro</div>
+          <p style="font-size:14px;line-height:1.8;color:#4c5a67;margin:0">2405 SW Cedar Hills Blvd<br>Beaverton, OR 97005<br>(503) 644-9200<br>Mon–Fri 8–5</p>
+        </aside>
+
+<script>
+function openMenu(){var p=document.getElementById('menuPanel'),o=document.getElementById('menuOverlay');p.style.transform='translateX(0)';o.style.opacity='1';o.style.visibility='visible';document.body.style.overflow='hidden';}
+function closeMenu(){var p=document.getElementById('menuPanel'),o=document.getElementById('menuOverlay');p.style.transform='translateX(100%)';o.style.opacity='0';o.style.visibility='hidden';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+</script>
 </body>
 </html>
