@@ -26,33 +26,31 @@
 </head>
 <body>
 <div style="background:#2c3d4f;color:#eef2f6;font-family:'Manrope',sans-serif">
-          <!-- top banner: sticky two-row (utility + nav); logo spans both rows -->
+          <!-- top banner: slim full-width utility strip + one clean logo/nav row -->
           <header style="position:sticky;top:0;z-index:100;background:#f6f3ec;border-bottom:1px solid rgba(20,32,44,.12);box-shadow:0 2px 14px rgba(20,32,44,.06)">
-            <div style="position:relative;max-width:1400px;margin:0 auto;padding:0 40px">
-              <!-- logo (spans both rows, anchored left) -->
-              <img src="../assets/logo-blue.png" alt="Smiles Northwest" style="position:absolute;left:40px;top:50%;transform:translateY(-50%);height:84px;width:auto">
-              <!-- row 1: utility — spread flush across the space right of the logo (Skyline-style) -->
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-left:330px;border-bottom:1px solid rgba(20,32,44,.1);padding:15px 0">
-                  <div style="display:flex;align-items:center;gap:12px">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#005B9A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-                    <div style="line-height:1.35"><div style="color:#005B9A;font-weight:700;font-size:13.5px">Mon – Wed 8:00am – 5:00pm</div><div style="color:#5c6b78;font-size:12.5px">Thu – Fri 7:00am – 4:00pm</div></div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:12px">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#005B9A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M6.5 3.5h4l1.5 4.5-2 1.5a12 12 0 0 0 5 5l1.5-2 4.5 1.5v4a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2Z"/></svg>
-                    <div style="line-height:1.35"><div style="color:#005B9A;font-weight:700;font-size:13.5px">(503) 644-9200</div><div style="color:#5c6b78;font-size:12.5px">info@smilesnw.com</div></div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:12px">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#005B9A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-                    <div style="line-height:1.35"><div style="color:#005B9A;font-weight:700;font-size:13.5px">2405 SW Cedar Hills Blvd</div><div style="color:#5c6b78;font-size:12.5px">Beaverton, OR 97005</div></div>
-                  </div>
+            <!-- utility strip: full-width dark band -->
+            <div style="background:#005B9A;color:#f6f3ec">
+              <div style="max-width:1400px;margin:0 auto;padding:9px 40px;display:flex;align-items:center;justify-content:space-between;font-size:12.5px">
+                <div style="display:flex;align-items:center;gap:9px">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;opacity:.85"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                  <span style="font-weight:600">Mon – Wed 8:00am – 5:00pm&nbsp;&nbsp;·&nbsp;&nbsp;Thu – Fri 7:00am – 4:00pm</span>
                 </div>
-              <!-- row 2: nav — centered under the contact row (same span, same axis) -->
-              <div style="position:relative;display:flex;align-items:center;justify-content:center;gap:48px;margin-left:330px;padding:13px 0;min-height:66px">
+                <div style="display:flex;align-items:center;gap:32px">
+                  <span style="display:flex;align-items:center;gap:9px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;opacity:.85"><path d="M6.5 3.5h4l1.5 4.5-2 1.5a12 12 0 0 0 5 5l1.5-2 4.5 1.5v4a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2Z"/></svg><span style="font-weight:700">(503) 644-9200</span></span>
+                  <span style="opacity:.9">info@smilesnw.com</span>
+                  <span style="display:flex;align-items:center;gap:9px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;opacity:.85"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>2405 SW Cedar Hills Blvd, Beaverton, OR 97005</span></span>
+                </div>
+              </div>
+            </div>
+            <!-- main row: logo left, nav right -->
+            <div style="max-width:1400px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between">
+              <img src="../assets/logo-blue.png" alt="Smiles Northwest" style="height:62px;width:auto">
+              <nav aria-label="Main" style="display:flex;align-items:center;gap:44px">
                 <a href="#" class="topnav">About Us</a>
                 <a href="#" class="topnav">Our Difference</a>
                 <a href="#" class="topnav">Dental Services</a>
                 <a href="#" class="topnav">Smile Gallery</a>
-              </div>
+              </nav>
             </div>
           </header>
 
