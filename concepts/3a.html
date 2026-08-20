@@ -28,15 +28,11 @@
 <div style="background:#2c3d4f;color:#eef2f6;font-family:'Manrope',sans-serif">
           <!-- top banner: sticky two-row (utility + nav); logo spans both rows -->
           <header style="position:sticky;top:0;z-index:100;background:#f6f3ec;border-bottom:1px solid rgba(20,32,44,.12);box-shadow:0 2px 14px rgba(20,32,44,.06)">
-            <div style="display:flex;align-items:stretch;max-width:1400px;margin:0 auto;padding:0 40px">
-              <!-- logo (spans both rows) -->
-              <div style="display:flex;align-items:center;padding:14px 46px 14px 0">
-                <img src="../assets/logo-blue.png" alt="Smiles Northwest" style="height:84px;width:auto">
-              </div>
-              <!-- right: two stacked rows -->
-              <div style="flex:1;display:flex;flex-direction:column">
-                <!-- row 1: utility — fixed equal gaps, centered as a group -->
-                <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:76px;border-bottom:1px solid rgba(20,32,44,.1);padding:14px 0">
+            <div style="position:relative;max-width:1400px;margin:0 auto;padding:0 40px">
+              <!-- logo (spans both rows, anchored left) -->
+              <img src="../assets/logo-blue.png" alt="Smiles Northwest" style="position:absolute;left:40px;top:50%;transform:translateY(-50%);height:84px;width:auto">
+              <!-- row 1: utility — spread flush across the space right of the logo (Skyline-style) -->
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-left:330px;border-bottom:1px solid rgba(20,32,44,.1);padding:15px 0">
                   <div style="display:flex;align-items:center;gap:12px">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#005B9A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
                     <div style="line-height:1.35"><div style="color:#005B9A;font-weight:700;font-size:13.5px">Mon – Wed 8:00am – 5:00pm</div><div style="color:#5c6b78;font-size:12.5px">Thu – Fri 7:00am – 4:00pm</div></div>
@@ -50,14 +46,13 @@
                     <div style="line-height:1.35"><div style="color:#005B9A;font-weight:700;font-size:13.5px">2405 SW Cedar Hills Blvd</div><div style="color:#5c6b78;font-size:12.5px">Beaverton, OR 97005</div></div>
                   </div>
                 </div>
-                <!-- row 2: nav — links centered as a group, button anchored flush right -->
-                <div style="position:relative;display:flex;align-items:center;justify-content:center;gap:48px;padding:13px 0;min-height:66px">
-                  <a href="#" class="topnav">About Us</a>
-                  <a href="#" class="topnav">Our Difference</a>
-                  <a href="#" class="topnav">Dental Services</a>
-                  <a href="#" class="topnav">Smile Gallery</a>
-                  <div class="btn-dark" style="position:absolute;right:0;top:50%;transform:translateY(-50%);padding:13px 26px;background:#005B9A;color:#f6f3ec;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:8px">New Patients</div>
-                </div>
+              <!-- row 2: nav — full-width row, links centered on the page's true axis, button flush right -->
+              <div style="position:relative;display:flex;align-items:center;justify-content:center;gap:48px;padding:13px 0;min-height:66px">
+                <a href="#" class="topnav">About Us</a>
+                <a href="#" class="topnav">Our Difference</a>
+                <a href="#" class="topnav">Dental Services</a>
+                <a href="#" class="topnav">Smile Gallery</a>
+                <div class="btn-dark" style="position:absolute;right:0;top:50%;transform:translateY(-50%);padding:13px 26px;background:#005B9A;color:#f6f3ec;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:8px">New Patients</div>
               </div>
             </div>
           </header>
